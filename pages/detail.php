@@ -21,57 +21,57 @@
 </head>
 
 <body>
-<!-- Header -->
-<header>
-    <?php include urlPage . "layouts/components/nav.php"; ?>
-</header>
-<!-- /Header -->
+    <!-- Header -->
+    <header>
+        <?php include urlPage . "layouts/components/nav.php"; ?>
+    </header>
+    <!-- /Header -->
 
-<!-- Content -->
-<div class="content" style="margin: 100px 0;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="post-detail">
-                    <p class="category"><?php echo $postDetail['NAME'] ?></p>
+    <!-- Content -->
+    <div class="content" style="margin: 100px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="post-detail">
+                        <p class="category"><?php echo $postDetail['NAME'] ?></p>
+                        <hr>
+                        <h1 class="post-title">
+                            <?php echo $postDetail['TITLE'] ?>
+                        </h1>
+                        <p class="date-up" style="text-align: right; opacity: 0.7;">
+                            <?php DateUp::view($postDetail['DATE_UP']) ?></p>
+
+                        <img src="../public/images/<?php echo $postDetail['IMAGE1'] ?>" class="w-100" alt="">
+
+                        <p class="post-sapo">
+                            <?php echo $postDetail['SAPO'] ?>
+                        </p>
+
+                        <p class="post-content">
+                            <?php echo substr($postDetail['CONTENT'], 0, strlen(($postDetail['CONTENT'])) / 2) ?>
+                        </p>
+
+                        <img src="../public/images/<?php echo !empty($postDetail['IMAGE2']) ? ($postDetail['IMAGE2']) : '' ?>"
+                            class="w-100" alt="">
+
+                        <p class="post-content">
+                            <?php echo substr($postDetail['CONTENT'], strlen(($postDetail['CONTENT'])) / 2, strlen($postDetail['CONTENT'])) ?>
+                        </p>
+                    </div>
+
                     <hr>
-                    <h1 class="post-title">
-                        <?php echo $postDetail['TITLE'] ?>
-                    </h1>
-                    <p class="date-up"
-                       style="text-align: right; opacity: 0.7;"><?php DateUp::view($postDetail['DATE_UP']) ?></p>
 
-                    <img src="../public/images/<?php echo $postDetail['IMAGE1'] ?>" class="w-100" alt="">
+                    <!-- Comment -->
 
-                    <p class="post-sapo">
-                        <?php echo $postDetail['SAPO'] ?>
-                    </p>
 
-                    <p class="post-content">
-                        <?php echo substr($postDetail['CONTENT'], 0, strlen(($postDetail['CONTENT'])) / 2) ?>
-                    </p>
 
-                    <img src="../public/images/<?php echo !empty($postDetail['IMAGE2']) ? ($postDetail['IMAGE2']) : '' ?>"
-                         class="w-100" alt="">
-
-                    <p class="post-content">
-                        <?php echo substr($postDetail['CONTENT'], strlen(($postDetail['CONTENT'])) / 2, strlen($postDetail['CONTENT'])) ?>
-                    </p>
+                    <!-- /Comment -->
                 </div>
 
-                <hr>
+                <div class="col-md-4">
+                    <h5 style="margin-top: 30px; margin-bottom: 20px;">Tin liên quan</h5>
 
-                <!-- Comment -->
-                
-                
-
-                <!-- /Comment -->
-            </div>
-
-            <div class="col-md-4">
-                <h5 style="margin-top: 30px; margin-bottom: 20px;">Tin liên quan</h5>
-
-                <?php
+                    <?php
                 $listPostMore = [];
 
                 if (!empty($arrPostMore[0])) {
@@ -91,21 +91,21 @@
                 if (!empty($arrPostMore[4]))
                     echo PostNormal::view($arrPostMore[4], urlPage);
                 ?>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- /Content -->
+    <!-- /Content -->
 
-<?php require '../layouts/footer.php' ?>
+    <?php require '../layouts/footer.php' ?>
 
-<!-- Go to top -->
-<div class="go-top top">
-    <i class="fa fa-chevron-up" aria-hidden="true"></i>
-</div>
-<!-- /Go to top -->
+    <!-- Go to top -->
+    <div class="go-top top">
+        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+    </div>
+    <!-- /Go to top -->
 
-<?php
+    <?php
 require '../layouts/script.php';
 ?>
 
