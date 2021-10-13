@@ -10,7 +10,18 @@
     <link rel="stylesheet" href="./public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/post.css">
 </head>
-
+<?php
+    require 'posts_connect.php';
+    $limit = 8;  
+        if (isset($_GET["page"])) {
+            $page  = $_GET["page"]; 
+            } 
+            else{ 
+            $page=1;
+            };  
+        $start = ($page-1) * $limit;  
+        $resulte = mysqli_query($conn,"SELECT * FROM post ORDER BY ID_POST ASC LIMIT $start, $limit");
+    ?>
 <body>
     <?php
     include 'header_admin.php';
@@ -52,6 +63,7 @@
     }
     ?>
             </table>
+            <?php include 'pagination.php';?>
         </div>
     </section>
 </body>
