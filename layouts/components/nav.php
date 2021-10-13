@@ -33,8 +33,9 @@ $arrCategory = $category->getAll();
 
             <form action="<?php echo urlPage . 'pages/search.php' ?>" class="form-inline my-2 my-lg-0">
                 <input name="key" class="form-control mr-sm-2" type="text" placeholder="Tìm theo tên bài...">
-                <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>
+                <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>                
             </form>
+            <a href="admin/posts_view.php" style="margin-left: 50px;"> <b>Admin</b>  </a>
         </div>
     </div>
 </nav>
