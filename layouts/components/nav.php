@@ -35,7 +35,7 @@ $arrCategory = $category->getAll();
                 <input name="key" class="form-control mr-sm-2" type="text" placeholder="Tìm theo tên bài...">
                 <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>                
             </form>
-            <a href="admin/posts_view.php" style="margin-left: 50px;"> Admin </a>
+            <a href="admin/posts_view.php" style="margin-left: 50px;"> <b>Admin</b>  </a>
         </div>
     </div>
 </nav>
