@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Posts view</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
     <link rel="stylesheet" href="./public/css/post.css">
 </head>
 <?php
@@ -22,6 +22,7 @@
         $start = ($page-1) * $limit;  
         $resulte = mysqli_query($conn,"SELECT * FROM post ORDER BY ID_POST ASC LIMIT $start, $limit");
     ?>
+
 <body>
     <?php
     include 'header_admin.php';
