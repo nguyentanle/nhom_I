@@ -22,10 +22,6 @@ class PostBig
 
                     <div class="col-md-5">
                         <img src="' . $urlPage . 'public/images/' . $post['IMAGE1'] . '" class="img-post" alt="">
-                        <ul class="bg-circle">
-                            <li></li>
-                            <li></li>
-                        </ul>
                     </div>
                 </div>';
         } else {
@@ -33,10 +29,6 @@ class PostBig
                 <div class="row post-big" data-scroll>
                     <div class="col-md-5">
                         <img src="' . $urlPage . 'public/images/' . $post['IMAGE1'] . '" class="img-post" alt="">
-                        <ul class="bg-circle">
-                            <li></li>
-                            <li></li>
-                        </ul>
                     </div>
                     <div class="col-md-7">
                         <div class="content">

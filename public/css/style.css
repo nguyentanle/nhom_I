@@ -529,33 +529,6 @@ header #carousel .down-svg {
   position: absolute;
 }
 
-.bg-circle li:nth-child(1) {
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  background-color: #be2623b0;
-  -webkit-animation: circle1 linear 8s infinite alternate;
-  animation: circle1 linear 8s infinite alternate;
-}
-
-.bg-circle li:nth-child(2) {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  background-color: #be2623b0;
-  -webkit-animation: circle2 linear 6s infinite alternate;
-  animation: circle2 linear 6s infinite alternate;
-}
-
-.bg-circle li:nth-child(3) {
-  height: 120px;
-  width: 120px;
-  border-radius: 50%;
-  background-color: #be2623b0;
-  -webkit-animation: circle3 linear 10s infinite alternate;
-  animation: circle3 linear 10s infinite alternate;
-}
-
 footer {
   padding: 4rem 0;
   background-color: #fff;
