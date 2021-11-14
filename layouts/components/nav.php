@@ -35,7 +35,10 @@ $arrCategory = $category->getAll();
                 <input name="key" class="form-control mr-sm-2" type="text" placeholder="Tìm theo tên bài...">
                 <button class="btn btn-danger my-2 my-sm-0" type="submit">Search</button>                
             </form>
-            <a href="admin/posts_view.php" style="margin-left: 50px;"> <b>Admin</b>  </a>
+            <form action="<?php echo urlPage . 'admin/login/dangnhap.php' ?>" class="form-inline my-2 my-lg-0">
+                <button class="btn btn-danger my-2 my-sm-0" type="submit">Đăng Nhập</button>
+            </form>
+            
         </div>
     </div>
 </nav>
